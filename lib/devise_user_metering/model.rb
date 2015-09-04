@@ -3,12 +3,12 @@
 module Devise
   module Models
     module UserMetering
-      
+
       # takes a time, returns the active interval in that time's month
       def active_proportion_of_month(time)
         active_proportion_of_interval(time.beginning_of_month, time.end_of_month)
       end
-      
+
       # takes an interval start and interval end
       # returns a decimal between 0 and 1 that reflects the proportion of time in the given interval
       # that the user has been 'active'
